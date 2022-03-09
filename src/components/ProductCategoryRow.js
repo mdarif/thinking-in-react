@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
-
-export default class ProductCategoryRow extends Component {
-  render () {
-    return (
-      <>
-        <tr>
-          <th colSpan='2'>{this.props.category}</th>
-        </tr>
-      </>
-    )
-  }
+function ProductCategoryRow ({ category }) {
+  return (
+    <tr>
+      <th colSpan='2'>{category}</th>
+    </tr>
+  )
 }
+
+export default ProductCategoryRow

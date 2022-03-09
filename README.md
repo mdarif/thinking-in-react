@@ -16,6 +16,27 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
+### Directory Structure
+
+```
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.js
+    ├── components
+    │   ├── ErrorBoundary.js
+    │   ├── FilterableProductTable.js
+    │   ├── ProductCategoryRow.js
+    │   ├── ProductRow.js
+    │   ├── ProductTable.js
+    │   └── SearchBar.js
+    └── index.js
+```
+
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 

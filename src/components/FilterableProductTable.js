@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductTable from './ProductTable'
 import SearchBar from './SearchBar'
 
@@ -10,44 +10,25 @@ import SearchBar from './SearchBar'
           ProductRow
  */
 
-class FilterableProductTable extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      filterText: '',
-      inStockOnly: false
-    }
-  }
+function FilterableProductTable ({ products }) {
+  const [filterText, setFilterText] = useState('')
+  const [inStockOnly, setInStockOnly] = useState(false)
 
-  handleFilterTextChange = filterText => {
-    this.setState({
-      filterText: filterText
-    })
-  }
-
-  handleInStockChange = inStockOnly => {
-    this.setState({
-      inStockOnly: inStockOnly
-    })
-  }
-
-  render () {
-    return (
-      <>
-        <SearchBar
-          filterText={this.state.filterText}
-          inStockOnly={this.state.inStockOnly}
-          onFilterTextChange={this.handleFilterTextChange}
-          onInStockChange={this.handleInStockChange}
-        />
-        <ProductTable
-          filterText={this.state.filterText}
-          inStockOnly={this.state.inStockOnly}
-          products={this.props.products}
-        />
-      </>
-    )
-  }
+  return (
+    <div>
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={setFilterText}
+        onInStockOnlyChange={setInStockOnly}
+      />
+      <ProductTable
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+      />
+    </div>
+  )
 }
 
 export default FilterableProductTable

@@ -22,7 +22,7 @@ function ProductTable ({ products, filterText, inStockOnly }) {
     }
 
     /**
-     * The logical NOT (!) operator takes truth to falsity and vice versa.
+     * The logical NOT (!) operator takes truth to falsy and vice versa.
      * It is typically used with boolean (logical) values. When used with non-Boolean values,
      * it returns false if its single operand can be converted to true; otherwise, returns true.
      */

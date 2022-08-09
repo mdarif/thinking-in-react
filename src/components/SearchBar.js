@@ -20,7 +20,7 @@ function SearchBar ({
         placeholder='Search...'
         value={filterText}
         onChange={e => {
-          onFilterTextChange(e.target.value)
+          onFilterTextChange(e.target.value) // Inside the SearchBar, you will add the onChange event handlers and set the parent state from them
         }}
       />
       <label>
